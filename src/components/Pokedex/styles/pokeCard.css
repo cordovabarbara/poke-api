@@ -1,0 +1,25 @@
+.pokemon{
+    width: 100%;
+    max-width: 350px;
+    border-radius: 0.8em;
+    overflow: hidden;
+}
+
+.pokemon__header {
+    background-color: darkgray;
+    height: 180px;
+    position: relative;
+}
+
+.pokemon__sprite{
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+.pokemon__card{
+    padding: 1em;
+    padding-top: 70px;
+}

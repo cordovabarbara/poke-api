@@ -3,24 +3,23 @@ import useFetch from '../../hooks/useFetch'
 import PokeCard from "./PokeCard"
 
 const PokeBox = () => {
-  const url = `https://pokeapi.co/api/v2/pokemon?limit=10&offset=0`
-  const [ pokemons, getAllPokemos ] = useFetch(url)
+  const url = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0.'
+  const [pokemons, getAllPokemons] = useFetch(url)
 
-  useEffect (() => {
-    getAllPokemos()
+  useEffect(() => {
+    getAllPokemons()
   }, [])
 
-  return (
+  return(
     <div className='poke__box'>
     {
-      pokemons?.results.map(pokemon => {
+      pokemons?.results.map(pokemon => (
         <PokeCard
           key={pokemon.url}
           url={pokemon.url}
         />
-    })
+      ))
     }
-    
     </div>
   )
 }

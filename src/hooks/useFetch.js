@@ -13,6 +13,6 @@ const useFetch = url => {
 
     }
 
-    return (state, getData)
+    return [state, getData]
 }
 export default useFetch

@@ -15,11 +15,11 @@ const PokeCard = ({ url }) => {
       <header className="pokemon__header">
         <img className="pokemon__sprite"  src={pokemon?.sprites.other['official-artwork'].front_default } alt=""/>
       </header>
-        <div className="pokemon__body">
+        <div className="pokemon__card">
           <h3 className="pokemon__name">{pokemon?.name}</h3>
           <ul className="pokemon__types">
             {
-              pokemon?.types.map(objType =>(
+              pokemon?.types.map(objType => (
                 <li className="pokemon__type-specific" key={objType.type.url}>{objType.type.name}</li>
               ))
             }
