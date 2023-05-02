@@ -11,7 +11,7 @@ const PokeCard = ({ url }) => {
   },[]);
 
   return (
-    <div  className="pokemon">
+    <div  className={`pokemon color__border-${pokemon?.types[0].type.name}`}>
       <header className={`pokemon__header bg-${pokemon?.types[0].type.name}`}>
         <img className="pokemon__sprite"  src={pokemon?.sprites.other['official-artwork'].front_default } alt=""/>
       </header>
@@ -29,7 +29,7 @@ const PokeCard = ({ url }) => {
               pokemon?.stats.map(objStats =>(
                 <li className="pokemon__stats-specific"  key={objStats.stat.url}>
                   <span className="pokemon__stats-label">{objStats.stat.name}</span>
-                  <span className="pokeon__stats-value">{objStats.base_stat}</span>
+                  <span className={`pokemon__stats-value color-${pokemon?.types[0].type.name}`}>{objStats.base_stat}</span>
                 </li>
               ))
             }

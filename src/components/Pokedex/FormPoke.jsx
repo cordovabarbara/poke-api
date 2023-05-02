@@ -1,11 +1,15 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FormPoke = () => {
   const inputPoke = useRef();
 
+ const navigate = useNavigate()
+
 const adminSubmit = e => {
     e.preventDefault();
-    console.log(inputPoke.current.value);
+    const path = `/pokedex/${inputPoke.current.value.trim().toLowerCase()}`
+    navigate(path);
   };
 
 return (
