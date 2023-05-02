@@ -3,16 +3,17 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import Pokedex from './pages/Pokedex'
+import ProtectedRoutes from './pages/ProtectedRoutes'
 
 function App() {
 
 
   return (
-      <div className='app'> 
+    <div className='app'> 
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route>
-          <Route path='/pokedex' element={<Pokedex/>} />
+        <Route path='/' element={<Home />}/>
+        <Route path='/pokedex' element={<ProtectedRoutes />}>
+        <Route path='/pokedex' element={<Pokedex />}/>
         </Route>
       </Routes>
       </div>

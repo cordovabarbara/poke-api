@@ -4,7 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const ProtectedRoutes = () => {
 
-const { trainerName } = useSelector( state => state)
+const { trainerName } = useSelector(state => state)
 
 if (trainerName.length >=3) {
     return <Outlet/>
@@ -12,8 +12,6 @@ if (trainerName.length >=3) {
     return <Navigate to='/' />
     
 }
-
-
 }
 
 export default ProtectedRoutes

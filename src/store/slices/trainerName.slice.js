@@ -8,5 +8,5 @@ const trainerNameSlice = createSlice({
     }
 })
 
-export const { setTrainerName} = trainerNameSlice.actions
+export const { setTrainerName } = trainerNameSlice.actions
 export default trainerNameSlice.reducer

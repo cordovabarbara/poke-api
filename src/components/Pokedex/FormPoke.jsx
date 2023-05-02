@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 const FormPoke = () => {
   const inputPoke = useRef();
 
-const adminSubmit = (e) => {
+const adminSubmit = e => {
     e.preventDefault();
     console.log(inputPoke.current.value);
   };
