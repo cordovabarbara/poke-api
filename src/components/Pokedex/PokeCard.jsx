@@ -8,19 +8,19 @@ const PokeCard = ({ url }) => {
 
   useEffect (() => {
     getPokemonById()
-  },[])
+  },[]);
 
   return (
     <div  className="pokemon">
-      <header className="pokemon__header">
+      <header className={`pokemon__header bg-${pokemon?.types[0].type.name}`}>
         <img className="pokemon__sprite"  src={pokemon?.sprites.other['official-artwork'].front_default } alt=""/>
       </header>
         <div className="pokemon__card">
-          <h3 className="pokemon__name">{pokemon?.name}</h3>
+          <h3 className={`pokemon__name color-${pokemon?.types[0].type.name}`}>{pokemon?.name}</h3>
           <ul className="pokemon__types">
             {
               pokemon?.types.map(objType => (
-                <li className="pokemon__type-specific" key={objType.type.url}>{objType.type.name}</li>
+                <li className="pokemon__specific" key={objType.type.url}>{objType.type.name}</li>
               ))
             }
           </ul>
@@ -36,7 +36,7 @@ const PokeCard = ({ url }) => {
           </ul>
         </div>
     </div>
-  )
-}
+  );
+};
 
-export default PokeCard
+export default PokeCard;
