@@ -1,0 +1,21 @@
+
+
+.poke__welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 1em
+}
+
+.poke__hello{
+    color:#DD1A1A;
+    font-size: 35px;
+}
+
+
+.poke__img{
+    width: 400px;
+}

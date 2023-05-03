@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import useFetch from '../../hooks/useFetch'
 import './styles/pokeCard.css'
+import { useNavigate } from 'react-router-dom';
 
 const PokeCard = ({ url }) => {
 
@@ -10,8 +11,13 @@ const PokeCard = ({ url }) => {
     getPokemonById()
   },[]);
 
+  const navigate = useNavigate()
+    const handleClick = () =>{
+      navigate(`/pokedex/${pokemon.name}`)
+    }
+
   return (
-    <div  className={`pokemon color__border-${pokemon?.types[0].type.name}`}>
+    <div onClick={handleClick} className={`pokemon color__border-${pokemon?.types[0].type.name}`}>
       <header className={`pokemon__header bg-${pokemon?.types[0].type.name}`}>
         <img className="pokemon__sprite"  src={pokemon?.sprites.other['official-artwork'].front_default } alt=""/>
       </header>

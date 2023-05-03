@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { useEffect } from "react";
 
-const FormPoke = () => {
+const FormPoke = ({ setFormUrl, pokedexUrl }) => {
   const inputPoke = useRef();
+
+  const navigate = useNavigate()
 
   const url = 'https://pokeapi.co/api/v2/type/'
   const [ types, getTypes ] = useFetch (url)
@@ -14,16 +16,16 @@ const FormPoke = () => {
   }, [])
 
 
- const navigate = useNavigate()
+ 
 
 const adminSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
     const path = `/pokedex/${inputPoke.current.value.trim().toLowerCase()}`
     navigate(path);
   }
 
   const handleChange = e => {
-    e.target.value
+    setFormUrl(e.target.value);
 
   }
 
@@ -34,7 +36,7 @@ return (
         <button>Search</button>
     </form>
       <select onChange={handleChange}>
-        <option value="allPokemos">All Pokemons</option>
+        <option value={pokedexUrl}>All Pokemons</option>     
         {
           types?.results.map(type => (
             <option 
@@ -45,7 +47,7 @@ return (
         }
       </select>
     </div>
-  );
-};
+  )
+}
 
 export default FormPoke;

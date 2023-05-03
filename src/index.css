@@ -25,10 +25,19 @@
   input {
     outline: none;
     font-family: inherit;
+    padding: 0.2em 1.5rem;
+    border-radius: 0.5em 0 0 0.5em;
+    
   }
 
   button {
     font-family: inherit;
+    background-color: #DD1A1A;
+    color: #ffff;
+    padding: 0.3em 1.5rem;
+    border-radius: 0 1em 1em 0;
+    cursor: pointer;
+    border: none;
   }
 
   select {

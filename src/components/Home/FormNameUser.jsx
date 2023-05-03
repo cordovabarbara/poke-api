@@ -22,7 +22,7 @@ const navigate = useNavigate()
 return (
     <form onSubmit={submit}>
     <input ref={inputName} type='text'/>
-    <button>Star</button>
+    <button>Start</button>
     </form>
   )
 }
