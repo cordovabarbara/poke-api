@@ -1,0 +1,16 @@
+.poke__form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+
+
+@media (min-width: 760px) {
+    .poke__form {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+    }
+    
+}
