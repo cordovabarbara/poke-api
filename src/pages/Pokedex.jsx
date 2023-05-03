@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import FormPoke from '../components/Pokedex/FormPoke'
 import PokeBox from '../components/Pokedex/PokeBox'
+import './styles/pokedex.css'
+import pokewelcome from '/public/pokewelcome.png'
 
 
 
@@ -14,9 +16,9 @@ const Pokedex = () => {
   const { trainerName }=useSelector(state => state)
 
   return (
-    <div>
-      <h1>Pokedex</h1>
-      <p><span>Welcome{trainerName}</span></p>
+    <div className='poke'>
+      <img className='poke__wel' src={pokewelcome}></img>
+      <p><span className='pokedex__name'>Welcome {trainerName}!</span></p>
       <FormPoke pokedexUrl={pokedexUrl} setFormUrl={setFormUrl}/>
       <PokeBox formUrl={formUrl}/>
     </div>

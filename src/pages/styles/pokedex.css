@@ -1,0 +1,22 @@
+.poke{
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+
+.poke__wel{
+    width: 400px;
+
+}
+
+
+.pokedex__name{
+    font-size: 23px;
+    font-weight: bolder;
+    color: #DD1A1A;
+    letter-spacing: 0.2em;
+}

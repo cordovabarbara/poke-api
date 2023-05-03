@@ -1,13 +1,13 @@
 
 
 .poke__welcome{
+    padding-top: 5em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    gap: 1em
+    gap: 2em;
 }
 
 .poke__hello{
@@ -18,4 +18,9 @@
 
 .poke__img{
     width: 400px;
+}
+
+.poke__init{
+    padding-top: 1em;
+    max-width: 450px;
 }
