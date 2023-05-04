@@ -15,49 +15,54 @@ const PokeIndividual = ({ url }) => {
     },[name])
   
   return (
-    <div>
+  <div>
     <div className='poke__inicio'>
       <header className={`pokemon__header bg-${pokemon?.types[0].type.name}`}>
-      <img className="pokemon__sprite" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
+        <img className="pokemon__sprite" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
       </header>
-      <div className="name__poke">
+
+    <div className="name__poke">
       <h3 className={`color-${pokemon?.types[0].type.name}`}>{pokemon?.name}</h3>
+    </div>
+
+
+    <div className='poke__block'>
+      <div className='poke__info'>
+        <span className='poke__value'>Weight</span>{pokemon?.weight}
       </div>
-
-      <ul className='poke_list'>
-        <li className='poke__weight'>
-          <span>Weight</span>{pokemon?.weight}
-          </li>
-          <li className='poke__height'>
-          <span>Height</span>{pokemon?.height}
-          </li>
-      </ul>
-
-      <ul className='poke_list'>
-        <li className='poke__weight'>
-        <span>Types</span>
-        </li>
-        <li className='poke__height'>
-          <span>Skilss</span>
-          </li>
-      </ul>
-
+      <div className='poke__info'>
+        <span className='poke__value'>Height</span>{pokemon?.height}
+      </div>
+    </div>
       
-      <ul>
-          {
-            pokemon?.types.map(objType => (
-              <li className='type__pokemon' key={objType.type.url}>
-              {objType.type.name}</li>
-            ))
-          }
-      </ul>
+  <div className='poke__block2'>
+    <div className='poke__info'>
+      <span className='poke__value2'>Types</span>
+    </div>  
+    <div className='poke__info'>
+      <span className='poke__value2'>Skills</span>
+    </div>
+    </div>
+  </div>
 
-        <ul >{
-            pokemon?.abilities.map(objAbility => (
-                <li className='lista__type-specifics' key={objAbility.ability.url}>{objAbility.ability.name}</li>
-            ))
-            }
-        </ul>
+<div className='poke__block3'>
+  <ul className='list__info'>
+    {pokemon?.types.map(objType => (
+      <li className='type__pokemon' key={objType.type.url}> {objType.type.name}</li>
+        ))
+      }
+  </ul>
+  
+  <ul className='list__info'>
+    {pokemon?.abilities.map(objAbility => (
+      <li className='type__pokemon' key={objAbility.ability.url}>{objAbility.ability.name}
+        </li>
+          ))
+      }
+  </ul>
+</div>
+
+
 
 
       <ul className="all__stats">
@@ -68,15 +73,15 @@ const PokeIndividual = ({ url }) => {
                 <div className='progressbar' >
                 <progress className="progress_bar" min="1" max="150" value={objStat.base_stat}></progress>
                 </div>
-                <span className={`pokemon__stats-value color-${pokemon?.types[0].type.name}`}>{objStat.base_stat}</span>
+                <span className={`pokemon__stats-value color-${pokemon?.types[0].type.name}`}>{objStat.base_stat}
+                </span>
               </li>
             ))
           }
         </ul>
       
-
-      <div className='pokemon__move'>
-      <h2>Movements</h2>
+        <h2>Movements</h2>
+        <div className='pokemon__move'>
       <ul className='list__moves'>
         {
           pokemon?.moves.map(objMoves => (
@@ -87,7 +92,7 @@ const PokeIndividual = ({ url }) => {
       </div>
       </div>
       
-    </div>
+    
   )
 }
 
