@@ -20,9 +20,10 @@ const PokeIndividual = ({ url }) => {
       <header className={`pokemon__header bg-${pokemon?.types[0].type.name}`}>
       <img className="pokemon__sprite" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
       </header>
-      <div className="pokemon__card">
+      <div className="name__poke">
       <h3 className={`color-${pokemon?.types[0].type.name}`}>{pokemon?.name}</h3>
       </div>
+
       <ul className='poke_list'>
         <li className='poke__weight'>
           <span>Weight</span>{pokemon?.weight}
@@ -31,22 +32,48 @@ const PokeIndividual = ({ url }) => {
           <span>Height</span>{pokemon?.height}
           </li>
       </ul>
-    <ul>
-      <li>
-        <span>Types</span>{pokemon?.types[0].type.name}{pokemon?.types[1] ? `/ ${pokemon?.types[1].type.name}` : ''} 
-      </li>
-      <li>
-        <span>Skills {pokemon?.abilities[0].ability.name} {pokemon?.abilities[1].ability.name}</span>
-      </li>
-    </ul>
 
-    <ul className="pokemon__stats">
-      <h2>stats</h2>
-        <li> HP: <span>{pokemon?.stats[0].base_stat}</span></li>
-        <li> Attack: <span>{pokemon?.stats[1].base_stat}</span></li>
-        <li> Defense: <span>{pokemon?.stats[2].base_stat}</span></li>
-        <li> Speed: <span>{pokemon?.stats[5].base_stat}</span></li>
+      <ul className='poke_list'>
+        <li className='poke__weight'>
+        <span>Types</span>
+        </li>
+        <li className='poke__height'>
+          <span>Skilss</span>
+          </li>
+      </ul>
+
+      
+      <ul>
+          {
+            pokemon?.types.map(objType => (
+              <li className='type__pokemon' key={objType.type.url}>
+              {objType.type.name}</li>
+            ))
+          }
+      </ul>
+
+        <ul >{
+            pokemon?.abilities.map(objAbility => (
+                <li className='lista__type-specifics' key={objAbility.ability.url}>{objAbility.ability.name}</li>
+            ))
+            }
         </ul>
+
+
+      <ul className="all__stats">
+          {
+            pokemon?.stats.map(objStat => (
+              <li className="pokemon__stats-specific2" key={objStat.stat.url}>
+                <span className="pokemon__stats-label">{objStat.stat.name}</span>
+                <div className='progressbar' >
+                <progress className="progress_bar" min="1" max="150" value={objStat.base_stat}></progress>
+                </div>
+                <span className={`pokemon__stats-value color-${pokemon?.types[0].type.name}`}>{objStat.base_stat}</span>
+              </li>
+            ))
+          }
+        </ul>
+      
 
       <div className='pokemon__move'>
       <h2>Movements</h2>

@@ -24,14 +24,19 @@ const Pokedex = () => {
           <div class="poke__ball1"></div>
           <div class="poke__ball2"></div>
           <div class="poke__ball3"></div>
+          <img className='poke__wel' src={pokewelcome}></img>
           <div class="poke__ball4"></div>
           </div>
           <div className='end__black'></div>
         </section>
-      <img className='poke__wel' src={pokewelcome}></img>
+       
+      <div className='poke__saludo'>
       <p><span className='pokedex__name'>Welcome {trainerName}!</span></p>
+      <p className='poke_find'> Find your favorite pokemon!</p>
       <FormPoke pokedexUrl={pokedexUrl} setFormUrl={setFormUrl}/>
       <PokeBox formUrl={formUrl}/>
+      </div>
+      
     </div>
   )
 }
