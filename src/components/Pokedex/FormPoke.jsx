@@ -36,7 +36,7 @@ return (
       <input ref={inputPoke} type="text" />
         <button>Search</button>
     </form>
-      <select onChange={handleChange}>
+      <select className="poke__select" onChange={handleChange}>
         <option className="poke__option" value={pokedexUrl}>All Pokemons</option>     
         {
           types?.results.map(type => (

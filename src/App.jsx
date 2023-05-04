@@ -6,6 +6,7 @@ import Pokedex from './pages/Pokedex'
 import PokeInfo from './pages/PokeInfo'
 import ProtectedRoutes from './pages/ProtectedRoutes'
 
+
 function App() {
 
 

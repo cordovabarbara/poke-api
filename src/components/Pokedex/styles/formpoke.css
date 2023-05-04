@@ -1,7 +1,20 @@
 .poke__form{
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+   
+}
+
+.poke__select{
+    padding: 0.2em;
+    width: 210px;
+    background-color: #DD1A1A;
+    text-align: center;
+    color: #ffff;
+    text-transform: capitalize;
+    border-radius: 5em;
 }
 
 
@@ -10,7 +23,12 @@
     .poke__form {
         display: flex;
         flex-direction: row;
-        gap: 2em;
+        justify-content:space-around;
+        align-items: center;
+        gap: 10em;
     }
     
+    .poke__select{
+        border-bottom: none;
+    }
 }

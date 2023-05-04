@@ -1,0 +1,18 @@
+.poke__inicio{
+
+}
+
+
+
+.list__moves{
+    display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.list__moves-items{
+    background-color: rgba(197, 196, 196, 0.699);
+    padding: 8px;
+    border-radius: 15px;
+    margin: 4px;
+}

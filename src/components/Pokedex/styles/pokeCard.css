@@ -4,6 +4,7 @@
     border-radius: 0.8em;
     overflow: hidden;
     border: 0.6rem solid rgb(214, 214, 214);
+    cursor: pointer;
 }
 
 .pokemon__header {

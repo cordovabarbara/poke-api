@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import { useEffect } from 'react'
 import HasError from '../components/Pokedex/HasError'
+import './styles/pokeinfo.css'
+import PokeIndividual from './PokeIndividual'
+
 
 const PokeInfo = () => {
 
@@ -15,21 +18,18 @@ const PokeInfo = () => {
     getPokeByName()
   },[name])
 
-  console.log(pokemon)
-
+  console.log(pokemon);
   return (
     <div>
     {
       hasError
       ? <HasError/>
-      : <>
-      <img src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
-      <h2>{pokemon?.name}</h2>
-    </>
+      : <PokeIndividual url={url}/>
     }
-  
-    </div>
+  </div>
   )
-}
+
+  }
 
 export default PokeInfo
+
