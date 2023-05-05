@@ -103,9 +103,12 @@
   display: block;
   align-items: center;
   justify-content: center;
-  left: 160px;
+  margin-left: 9em;
 }
 
+.progress_bar{
+  width: 18em;
+}
 
 .pokemon__stats-specific1{
   display:flex;
@@ -113,7 +116,6 @@
   justify-content: space-between;
   padding: 0.2em;
   margin-left: 1em;
-  margin-right: 30px;
   font-weight: bold;
 
 
@@ -223,29 +225,21 @@
 }
 
 @media (min-width: 767px){
-
-  .progressbar{
-    position: absolute;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    
-  }
-
   .poke__bar{
-    margin-left: 300px;
+    margin-left: 18em;
   }
 
   .pokemon__stats-specific1{
     display: flex;
-    margin-left: 5em;
+    flex-direction: row;
+    margin-left: 10em;
     margin-right: 35em;
     align-items: center;
     font-weight: bold;
   }
 
    .progress_bar{
-    width: 400px;
+    width: 25em;
    }
 
 
