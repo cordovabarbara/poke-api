@@ -123,7 +123,7 @@
 }
 
 .progress_bar{
-  width: 13em;
+  width: 11em;
 }
 
 .pokemon__stats-specific1{
@@ -131,7 +131,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0.2em;
-  margin-left: 0.8em;
+  margin-left: 0.7em;
   margin-right: 1em;
   font-weight: bold;
 
