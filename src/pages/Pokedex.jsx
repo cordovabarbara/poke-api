@@ -10,7 +10,7 @@ import Posts from './Posts'
 
 const Pokedex = () => {
 
-  const pokedexUrl = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0..'
+  const pokedexUrl = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0..'
 
   const [ formUrl, setFormUrl] = useState(pokedexUrl)
 
