@@ -69,13 +69,14 @@
 }
 
 .list__info{
-  margin-right: -2em;
+  margin-right: -1em;
+  margin-left: -1em;
   display: flex;
-  gap: 0.5em;
+  gap: 0.4em;
   height: 2em;
   justify-content: space-around;
   text-transform: capitalize;
-  font-size: 16px;
+  font-size: 15px;
   align-items: center;
 }
 
@@ -83,7 +84,7 @@
   display: flex;
   justify-content: center;
   padding: 0.4em;
-  width: 6em;
+  width: 5em;
   border-radius: 1em;
   justify-content: center;
   align-items: center;
@@ -95,7 +96,7 @@
 .type__pokemon2{
   display: flex;
   justify-content: center;
-  padding: 0.2em;
+  padding: 0.5em;
   width: 6em;
   border: 0.1em solid #000;
   justify-content: center;
@@ -118,11 +119,11 @@
   display: block;
   align-items: center;
   justify-content: center;
-  margin-left: 10em;
+  margin-left: 9em;
 }
 
 .progress_bar{
-  width: 14em;
+  width: 13em;
 }
 
 .pokemon__stats-specific1{
@@ -131,7 +132,7 @@
   justify-content: space-between;
   padding: 0.2em;
   margin-left: 0.8em;
-  margin-right: 1.5em;
+  margin-right: 1em;
   font-weight: bold;
 
 

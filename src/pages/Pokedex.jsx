@@ -4,7 +4,7 @@ import FormPoke from '../components/Pokedex/FormPoke'
 import PokeBox from '../components/Pokedex/PokeBox'
 import './styles/pokedex.css'
 import pokewelcome from '/public/pokewelcome.png'
-import Posts from './Posts'
+
 
 
 
