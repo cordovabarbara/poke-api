@@ -48,7 +48,7 @@ const PokeIndividual = ({ url }) => {
 <div className='poke__block3'>
   <ul className='list__info'>
     {pokemon?.types.map(objType => (
-      <li className='type__pokemon' key={objType.type.url}> {objType.type.name}</li>
+      <li className={`type__pokemon colorb-${pokemon?.types[0].type.name}`} key={objType.type.url}> {objType.type.name}</li>
         ))
       }
   </ul>
