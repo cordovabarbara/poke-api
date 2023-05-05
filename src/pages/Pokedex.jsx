@@ -4,13 +4,15 @@ import FormPoke from '../components/Pokedex/FormPoke'
 import PokeBox from '../components/Pokedex/PokeBox'
 import './styles/pokedex.css'
 import pokewelcome from '/public/pokewelcome.png'
+import Pagination from './Pagination'
+
 
 
 
 
 const Pokedex = () => {
 
-  const pokedexUrl = 'https://pokeapi.co/api/v2/pokemon?limit=12&offset=0.'
+  const pokedexUrl = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0..'
 
   const [ formUrl, setFormUrl] = useState(pokedexUrl)
 
@@ -21,11 +23,11 @@ const Pokedex = () => {
     <section className='poke__header'>
           <div className='header__red'>line</div>
           <div className='poke__ball'>
-          <div class="poke__ball1"></div>
-          <div class="poke__ball2"></div>
-          <div class="poke__ball3"></div>
+          <div className="poke__ball1"></div>
+          <div className="poke__ball2"></div>
+          <div className="poke__ball3"></div>
           <img className='poke__wel' src={pokewelcome}></img>
-          <div class="poke__ball4"></div>
+          <div className="poke__ball4"></div>
           </div>
           <div className='end__black'></div>
         </section>
@@ -35,6 +37,7 @@ const Pokedex = () => {
       <p className='poke_find'> Find your favorite pokemon!</p>
       <FormPoke pokedexUrl={pokedexUrl} setFormUrl={setFormUrl}/>
       <PokeBox formUrl={formUrl}/>
+      <Pagination pokedexUrl={pokedexUrl}/>
       </div>
       
     </div>
