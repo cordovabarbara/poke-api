@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import Posts from './Posts';
 
 const Pagination = ({  }) => {
     const[posts, setPosts] = useState([]);
@@ -22,7 +23,9 @@ const Pagination = ({  }) => {
 
 
   return (
-    <div>Pagination</div>
+    <div className='container__ppl'>
+    <Posts posts={posts} loading={loading}/>
+    </div>
   )
 }
 

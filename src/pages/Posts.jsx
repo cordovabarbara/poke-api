@@ -5,7 +5,16 @@ const Posts = ({ posts, loading}) => {
         return <h2>Loading...</h2>
     }
   return (
-    <div>Posts</div>
+    <div>
+    <ul className='list-group mb-4'>
+        {posts.map(post =>(
+            <li key={post.url} className='list-group-item'>
+                {post.name}
+            </li>
+        ))}
+    </ul>
+
+    </div>
   )
 }
 

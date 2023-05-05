@@ -4,9 +4,7 @@ import FormPoke from '../components/Pokedex/FormPoke'
 import PokeBox from '../components/Pokedex/PokeBox'
 import './styles/pokedex.css'
 import pokewelcome from '/public/pokewelcome.png'
-import Pagination from './Pagination'
-
-
+import Posts from './Posts'
 
 
 
@@ -37,7 +35,6 @@ const Pokedex = () => {
       <p className='poke_find'> Find your favorite pokemon!</p>
       <FormPoke pokedexUrl={pokedexUrl} setFormUrl={setFormUrl}/>
       <PokeBox formUrl={formUrl}/>
-      <Pagination pokedexUrl={pokedexUrl}/>
       </div>
       
     </div>
