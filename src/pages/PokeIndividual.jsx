@@ -63,8 +63,7 @@ const PokeIndividual = ({ url }) => {
 </div>
 
 
-
-
+      <div className='stats__poke'></div>
       <ul className="all__stats">
           {
             pokemon?.stats.map(objStat => (
@@ -80,8 +79,9 @@ const PokeIndividual = ({ url }) => {
           }
         </ul>
       
-        <h2>Movements</h2>
+    
         <div className='pokemon__move'>
+        <h2>Movements</h2>
       <ul className='list__moves'>
         {
           pokemon?.moves.map(objMoves => (
