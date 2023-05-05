@@ -273,7 +273,7 @@
 .pokemon__stats{
     display: grid;
     grid-template-columns: repeat(3, auto);
-    row-gap: 2em;
+    row-gap: 1em;
     font-size: 0.7em;
     padding-top: 2em;
     margin-bottom: 2em;

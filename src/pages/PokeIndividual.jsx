@@ -66,13 +66,13 @@ const PokeIndividual = ({ url }) => {
       <div className='stats__poke'></div>
       <ul className="all__stats">
           {
-            pokemon?.stats.map(objStat => (
-              <li className="pokemon__stats-specific2" key={objStat.stat.url}>
-                <span className="pokemon__stats-label">{objStat.stat.name}</span>
-                <div className='progressbar' >
-                <progress className="progress_bar" min="1" max="150" value={objStat.base_stat}></progress>
+            pokemon?.stats.map(stat => (
+              <li className="pokemon__stats-specific1" key={stat.stat.url}>
+                <span className="pokemon__stats-label">{stat.stat.name}</span>
+                <div className={`poke__bar color-${pokemon?.types[0].type.name} `} >
+                <progress className="progress_bar " min="1" max="150" value={stat.base_stat}></progress>
                 </div>
-                <span className={`pokemon__stats-value color-${pokemon?.types[0].type.name}`}>{objStat.base_stat}
+                <span className={`pokemon__stats-value1 color-${pokemon?.types[0].type.name}`}>{stat.base_stat}
                 </span>
               </li>
             ))
