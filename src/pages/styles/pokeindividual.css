@@ -85,6 +85,7 @@
   border-radius: 1em;
   justify-content: center;
   align-items: center;
+  gap: 1em;
 }
 
 .stats__poke{
@@ -102,7 +103,7 @@
   display: block;
   align-items: center;
   justify-content: center;
-  left: 200px;
+  left: 170px;
 }
 
 
@@ -111,8 +112,8 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0.2em;
-  margin-left: 3em;
-  margin-right: 40px;
+  margin-left: 0.8em;
+  margin-right: 60px;
   font-weight: bold;
 
 
@@ -232,7 +233,7 @@
   }
 
   .poke__bar{
-    margin-left: 500px;
+    margin-left: 420px;
   }
 
   .pokemon__stats-specific1{
@@ -242,8 +243,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.2em;
-    margin-left: 510px;
-    margin-right: 470px;
+    margin-left: 410px;
+    margin-right: 600px;
     font-weight: bold;
   }
 
