@@ -89,7 +89,7 @@
 }
 
 .stats__poke{
-  margin: 40px;
+  margin: 2em;
 }
 
 .all__stats{
@@ -103,7 +103,7 @@
   display: block;
   align-items: center;
   justify-content: center;
-  margin-left: 9em;
+  margin-left: 10em;
 }
 
 .progress_bar{
@@ -116,6 +116,7 @@
   justify-content: space-between;
   padding: 0.2em;
   margin-left: 1em;
+  margin-right: 1em;
   font-weight: bold;
 
 
