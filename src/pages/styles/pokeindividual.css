@@ -225,17 +225,15 @@
 }
 
 @media (min-width: 767px){
-  .poke__bar{
-    margin-left: 18em;
-  }
+
 
   .pokemon__stats-specific1{
+    margin-left: 10em;
     display: flex;
     flex-direction: row;
-    margin-left: 10em;
-    margin-right: 35em;
     align-items: center;
     font-weight: bold;
+    margin-right: 15em;
   }
 
    .progress_bar{
